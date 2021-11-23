@@ -24,7 +24,7 @@ import { Testimonials } from "../src/components/testimonials";
 
 const Home: NextPage = () => {
   return (
-    <Box>
+    <Box bgImage="/blobs1.png" bgRepeat="no-repeat" bgPosition="left top">
       <Head>
         <title>First Choice Utility Options</title>
         <meta
@@ -33,7 +33,13 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Box as="main" pt={10}>
+      <Box
+        as="main"
+        pt={10}
+        bgImage="/blobs2.png"
+        bgRepeat="no-repeat"
+        bgPosition="right top"
+      >
         <Hero />
         <Sectors />
         <Features />

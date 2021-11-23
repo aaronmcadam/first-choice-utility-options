@@ -18,7 +18,9 @@ export function Hero() {
     <Box maxW="6xl" mx="auto" px={6}>
       <HStack justify="space-between">
         <Logo h={8} />
-        <Button>Call us</Button>
+        <Button as="a" href="tel:00353872470718">
+          Call us
+        </Button>
       </HStack>
       <HStack mt={16}>
         <Stack align="flex-start" spacing={5} maxW="2xl">
@@ -32,7 +34,7 @@ export function Hero() {
             We ensure you get the best deal by keeping on top of the
             ever-changing tariffs from all the energy providers in Ireland.
           </Text>
-          <Button variant="primary" size="lg">
+          <Button as="a" href="tel:00353872470718" variant="primary" size="lg">
             Call us
           </Button>
         </Stack>

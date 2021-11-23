@@ -12,7 +12,7 @@ export function Cta() {
             Get in touch today.
           </Box>
         </Heading>
-        <Button variant="primary" size="lg">
+        <Button as="a" href="tel:00353872470718" variant="primary" size="lg">
           Call us
         </Button>
       </Stack>
