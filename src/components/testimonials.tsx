@@ -7,7 +7,9 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
+import React from "react";
 import { Logo } from "./logo";
+import { QuotesIcon } from "./quotes-icon";
 
 export function Testimonials() {
   return (
@@ -23,31 +25,44 @@ export function Testimonials() {
           <Box flexShrink={0}>
             <Logo h={6} />
           </Box>
-          <Flex as="blockquote" direction="column" mt={6}>
-            <Text fontSize="lg" fontWeight="medium" color="purple.900">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-              expedita voluptas culpa sapiente alias molestiae. Numquam corrupti
-              in laborum sed rerum et corporis.
-            </Text>
-            <Box as="footer" mt={8}>
-              <HStack spacing={4}>
-                <Avatar
-                  showBorder={true}
-                  borderColor="purple.900"
-                  size="md"
-                  src="/danny.png"
-                />
-                <Stack spacing={0}>
-                  <Text fontWeight="medium" color="purple.900">
-                    Daniel McAdam
-                  </Text>
-                  <Text fontWeight="medium" color="purple.600">
-                    CEO, First Choice Utility Options
-                  </Text>
-                </Stack>
-              </HStack>
+          <Box pos="relative" mt={6}>
+            <QuotesIcon
+              boxSize={8}
+              pos="absolute"
+              transform="auto"
+              translateX={-3}
+              translateY={-2}
+              color="purple.200"
+              opacity={0.5}
+              stroke="none"
+              fill="currentColor"
+            />
+            <Box as="blockquote" pos="relative">
+              <Text fontSize="lg" fontWeight="medium" color="purple.900">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+                expedita voluptas culpa sapiente alias molestiae. Numquam
+                corrupti in laborum sed rerum et corporis.
+              </Text>
+              <Box as="footer" mt={8}>
+                <HStack spacing={4}>
+                  <Avatar
+                    showBorder={true}
+                    borderColor="purple.900"
+                    size="md"
+                    src="/danny.png"
+                  />
+                  <Stack spacing={0}>
+                    <Text fontWeight="medium" color="purple.900">
+                      Daniel McAdam
+                    </Text>
+                    <Text fontWeight="medium" color="purple.600">
+                      CEO, First Choice Utility Options
+                    </Text>
+                  </Stack>
+                </HStack>
+              </Box>
             </Box>
-          </Flex>
+          </Box>
         </Flex>
         <Flex
           direction="column"
@@ -59,31 +74,44 @@ export function Testimonials() {
           <Box flexShrink={0}>
             <Logo h={6} />
           </Box>
-          <Flex as="blockquote" direction="column" mt={6}>
-            <Text fontSize="lg" fontWeight="medium" color="purple.900">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-              expedita voluptas culpa sapiente alias molestiae. Numquam corrupti
-              in laborum sed rerum et corporis.
-            </Text>
-            <Box as="footer" mt={8}>
-              <HStack spacing={4}>
-                <Avatar
-                  showBorder={true}
-                  borderColor="purple.900"
-                  size="md"
-                  src="/danny.png"
-                />
-                <Stack spacing={0}>
-                  <Text fontWeight="medium" color="purple.900">
-                    Daniel McAdam
-                  </Text>
-                  <Text fontWeight="medium" color="purple.600">
-                    CEO, First Choice Utility Options
-                  </Text>
-                </Stack>
-              </HStack>
+          <Box pos="relative" mt={6}>
+            <QuotesIcon
+              boxSize={8}
+              pos="absolute"
+              transform="auto"
+              translateX={-3}
+              translateY={-2}
+              color="purple.200"
+              opacity={0.5}
+              stroke="none"
+              fill="currentColor"
+            />
+            <Box as="blockquote" pos="relative">
+              <Text fontSize="lg" fontWeight="medium" color="purple.900">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+                expedita voluptas culpa sapiente alias molestiae. Numquam
+                corrupti in laborum sed rerum et corporis.
+              </Text>
+              <Box as="footer" mt={8}>
+                <HStack spacing={4}>
+                  <Avatar
+                    showBorder={true}
+                    borderColor="purple.900"
+                    size="md"
+                    src="/danny.png"
+                  />
+                  <Stack spacing={0}>
+                    <Text fontWeight="medium" color="purple.900">
+                      Daniel McAdam
+                    </Text>
+                    <Text fontWeight="medium" color="purple.600">
+                      CEO, First Choice Utility Options
+                    </Text>
+                  </Stack>
+                </HStack>
+              </Box>
             </Box>
-          </Flex>
+          </Box>
         </Flex>
       </SimpleGrid>
     </Box>

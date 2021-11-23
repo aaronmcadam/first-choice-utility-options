@@ -1,4 +1,5 @@
 import { Center, Heading, SimpleGrid, Stack, Text } from "@chakra-ui/react";
+import { BordGais } from "./providers/bord-gais";
 
 export function Providers() {
   return (
@@ -15,16 +16,16 @@ export function Providers() {
       </Heading>
       <SimpleGrid columns={4} spacing={1} w="full">
         <Center p={8}>
-          <Text>Bord Gais</Text>
+          <BordGais color="gray.400" h={20} />
         </Center>
         <Center p={8}>
-          <Text>Bord Gais</Text>
+          <BordGais color="gray.400" h={20} />
         </Center>
         <Center p={8}>
-          <Text>Bord Gais</Text>
+          <BordGais color="gray.400" h={20} />
         </Center>
         <Center p={8}>
-          <Text>Bord Gais</Text>
+          <BordGais color="gray.400" h={20} />
         </Center>
       </SimpleGrid>
     </Stack>
