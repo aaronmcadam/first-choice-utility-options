@@ -18,7 +18,7 @@ import {
 
 export function Features() {
   return (
-    <Box py={16} maxW="6xl" mx="auto">
+    <Box py={16} maxW="6xl" mx="auto" px={6}>
       <Flex direction="column" align="center">
         <Heading
           as="h4"

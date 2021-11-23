@@ -2,7 +2,7 @@ import { Avatar, HStack, Stack, Text } from "@chakra-ui/react";
 
 export function CeoMessage() {
   return (
-    <HStack spacing={10} maxW="6xl" mx="auto">
+    <HStack spacing={10} maxW="6xl" mx="auto" px={6}>
       <Avatar size="3xl" src="/danny.png" />
       <Stack spacing={8}>
         <Text fontWeight="medium" fontSize="xl" maxW="2xl">
