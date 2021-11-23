@@ -25,7 +25,11 @@ export function Hero() {
       <HStack mt={16}>
         <Stack align="flex-start" spacing={5} maxW="2xl">
           <Heading as="h1" size="3xl" fontWeight="extrabold">
-            <Box as="span" color="purple.600">
+            <Box
+              as="mark"
+              bgGradient="linear(to-r, #FC19AD, #7F23F7, #14AFFC)"
+              bgClip="text"
+            >
               Save more than 25%
             </Box>{" "}
             off your electricity bill
