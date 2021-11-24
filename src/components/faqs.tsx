@@ -3,12 +3,17 @@ import { Box, Heading, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 export function Faqs() {
   return (
     <Box bg="pink.50">
-      <Box maxW="6xl" mx="auto" px={6} py={16}>
+      <Box mx="auto" px={{ base: 4, sm: 6 }} py={16}>
         <Heading fontSize="3xl" fontWeight="extrabold" color="pink.900">
           Frequently asked questions
         </Heading>
         <Box mt={6} borderTopWidth="1px" borderColor="pink.200" pt={10}>
-          <SimpleGrid as="dl" columns={2} spacingX={8} spacingY={12}>
+          <SimpleGrid
+            as="dl"
+            columns={{ base: 1, sm: 2 }}
+            spacingX={{ base: 0, sm: 8 }}
+            spacingY={{ base: 10, sm: 12 }}
+          >
             <Stack>
               <Text as="dt" fontSize="lg" fontWeight="medium" color="pink.900">
                 Do I have to pay for using your services?

@@ -15,26 +15,45 @@ import { PlayIcon } from "./play-icon";
 
 export function Hero() {
   return (
-    <Box maxW="6xl" mx="auto" px={6}>
+    <Box mx="auto" px={{ base: 4, sm: 6 }}>
       <HStack justify="space-between">
         <Logo h={8} />
-        <Button as="a" href="tel:00353872470718">
+        <Button
+          as="a"
+          href="tel:00353872470718"
+          display={{ base: "none", sm: "unset" }}
+        >
           Call us
         </Button>
       </HStack>
-      <HStack mt={16}>
-        <Stack align="flex-start" spacing={5} maxW="2xl">
-          <Heading as="h1" size="3xl" fontWeight="extrabold">
+      <Stack
+        spacing={{ base: 12, sm: 2 }}
+        direction={{ base: "column", sm: "row" }}
+        mt={{ base: 8, sm: 16 }}
+      >
+        <Stack align={{ base: "center", sm: "flex-start" }} spacing={5}>
+          <Heading
+            as="h1"
+            fontSize={{ base: "3xl", sm: "6xl" }}
+            fontWeight="extrabold"
+            textAlign={{ base: "center", sm: "left" }}
+          >
             <Box
               as="mark"
               bgGradient="linear(to-r, #FC19AD, #7F23F7, #14AFFC)"
               bgClip="text"
+              display="block"
             >
               Save more than 25%
             </Box>{" "}
             off your electricity bill
           </Heading>
-          <Text color="purple.900" mt="5" fontSize="xl">
+          <Text
+            color="purple.900"
+            mt="5"
+            fontSize={{ base: "md", sm: "xl" }}
+            textAlign={{ base: "center", sm: "left" }}
+          >
             We ensure you get the best deal by keeping on top of the
             ever-changing tariffs from all the energy providers in Ireland.
           </Text>
@@ -73,7 +92,7 @@ export function Hero() {
             </Flex>
           </chakra.button>
         </Box>
-      </HStack>
+      </Stack>
     </Box>
   );
 }

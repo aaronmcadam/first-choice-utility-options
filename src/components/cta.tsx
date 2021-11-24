@@ -2,8 +2,8 @@ import { Box, Button, Heading, Stack } from "@chakra-ui/react";
 
 export function Cta() {
   return (
-    <Box maxW="6xl" mx="auto">
-      <Stack spacing={8} align="flex-start" px={6} py={16}>
+    <Box mx="auto">
+      <Stack spacing={8} align="flex-start" px={{ base: 4, sm: 6 }} py={16}>
         <Heading fontSize="3xl" fontWeight="extrabold" letterSpacing="tight">
           <Box as="span" display="block">
             Ready to save on your electricity?

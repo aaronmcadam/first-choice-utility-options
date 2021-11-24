@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import * as React from "react";
@@ -17,7 +17,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Banner />
-      <Box bgImage="/blobs1.png" bgRepeat="no-repeat" bgPosition="left top">
+      <Box pos="relative">
         <Head>
           <title>First Choice Utility Options</title>
           <meta
@@ -29,9 +29,9 @@ const Home: NextPage = () => {
         <Box
           as="main"
           pt={10}
-          bgImage="/blobs2.png"
-          bgRepeat="no-repeat"
-          bgPosition="right top"
+          // bgImage="/blobs2.png"
+          // bgRepeat="no-repeat"
+          // bgPosition="right top"
         >
           <Hero />
           <Sectors />
@@ -43,6 +43,9 @@ const Home: NextPage = () => {
           <Cta />
         </Box>
         <Footer />
+        {/* <Box pos="absolute" w="full" top={0}>
+          <Image src="/blobs1.png" alt="bg" />
+        </Box> */}
       </Box>
     </>
   );

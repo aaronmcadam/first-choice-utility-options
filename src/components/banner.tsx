@@ -1,9 +1,17 @@
-import { HStack, Icon, Link, Text } from "@chakra-ui/react";
+import { HStack, Icon, Link, Stack, Text } from "@chakra-ui/react";
+import React from "react";
 import { HiArrowRight } from "react-icons/hi";
 
 export function Banner() {
   return (
-    <HStack justify="center" bg="purple.600" px={6} py={3}>
+    <Stack
+      align="flex-start"
+      direction={{ base: "column", sm: "row" }}
+      justify="center"
+      bg="purple.600"
+      px={6}
+      py={3}
+    >
       <Text fontWeight="medium" color="white">
         Proud sponsors of Clones Film Festival
       </Text>
@@ -26,6 +34,6 @@ export function Banner() {
           <Icon as={HiArrowRight} boxSize={5} />
         </HStack>
       </Link>
-    </HStack>
+    </Stack>
   );
 }

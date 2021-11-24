@@ -18,8 +18,8 @@ import {
 
 export function Features() {
   return (
-    <Box py={16} maxW="6xl" mx="auto" px={6}>
-      <Flex direction="column" align="center">
+    <Box py={16} mx="auto" px={{ base: 4, sm: 6 }}>
+      <Flex direction="column" align={{ base: "flex-start", sm: "center" }}>
         <Heading
           as="h4"
           color="purple.600"
@@ -33,13 +33,23 @@ export function Features() {
         <Heading fontWeight="extrabold" mt={2}>
           We focus on you, not the provider
         </Heading>
-        <Text align="center" maxW="3xl" color="gray.500" fontSize="xl" mt={4}>
+        <Text
+          align={{ base: "left", sm: "center" }}
+          color="gray.500"
+          fontSize="xl"
+          mt={4}
+        >
           We combine our industry knowledge and the leverage that comes from
           representing thousands of Irish businesses to get the best possible
           price for you.
         </Text>
       </Flex>
-      <SimpleGrid columns={2} spacingX={8} spacingY={10} mt={10}>
+      <SimpleGrid
+        columns={{ base: 1, sm: 2 }}
+        spacingX={8}
+        spacingY={10}
+        mt={10}
+      >
         <HStack align="flex-start" spacing={4}>
           <Center
             boxSize={12}

@@ -6,7 +6,11 @@ import {
   SimpleGrid,
   Stack,
   Text,
+  Flex,
+  Box,
 } from "@chakra-ui/react";
+import React from "react";
+import { IconType } from "react-icons";
 import {
   HiHeart,
   HiShoppingBag,
@@ -18,9 +22,20 @@ import {
   HiGlobe,
 } from "react-icons/hi";
 
+function Sector({ icon, label }: { icon: IconType; label: string }) {
+  return (
+    <Flex align="center" color="gray.500" p={{ base: 4, sm: 5 }}>
+      <Icon as={icon} boxSize={5} />
+      <Text as="span" fontWeight="medium" ml={1} lineHeight="20px">
+        {label}
+      </Text>
+    </Flex>
+  );
+}
+
 export function Sectors() {
   return (
-    <Stack align="center" spacing={6} py={16}>
+    <Stack align="center" spacing={6} py={16} px={{ base: 4, sm: 6 }}>
       <Heading
         as="h4"
         color="gray.600"
@@ -28,43 +43,20 @@ export function Sectors() {
         fontWeight="semibold"
         textTransform="uppercase"
         letterSpacing="wider"
+        textAlign="center"
       >
         Trusted by companies across many business sectors
       </Heading>
-      <HStack spacing={8}>
-        <HStack spacing={1} color="gray.500">
-          <Icon as={HiHeart} boxSize={5} />
-          <Text fontWeight="medium">Healthcare</Text>
-        </HStack>
-        <HStack spacing={1} color="gray.500">
-          <Icon as={HiShoppingBag} boxSize={5} />
-          <Text fontWeight="medium">Retail</Text>
-        </HStack>
-        <HStack spacing={1} color="gray.500">
-          <Icon as={HiScale} boxSize={5} />
-          <Text fontWeight="medium">Legal</Text>
-        </HStack>
-        <HStack spacing={1} color="gray.500">
-          <Icon as={HiSun} boxSize={5} />
-          <Text fontWeight="medium">Tourism</Text>
-        </HStack>
-        <HStack spacing={1} color="gray.500">
-          <Icon as={HiEmojiHappy} boxSize={5} />
-          <Text fontWeight="medium">Leisure</Text>
-        </HStack>
-        <HStack spacing={1} color="gray.500">
-          <Icon as={HiOfficeBuilding} boxSize={5} />
-          <Text fontWeight="medium">Business</Text>
-        </HStack>
-        <HStack spacing={1} color="gray.500">
-          <Icon as={HiCog} boxSize={5} />
-          <Text fontWeight="medium">Industrial</Text>
-        </HStack>
-        <HStack spacing={1} color="gray.500">
-          <Icon as={HiGlobe} boxSize={5} />
-          <Text fontWeight="medium">Agricultural</Text>
-        </HStack>
-      </HStack>
+      <Flex align="center" justify="center" wrap="wrap" maxW="2xl">
+        <Sector icon={HiHeart} label="Healthcare" />
+        <Sector icon={HiShoppingBag} label="Retail" />
+        <Sector icon={HiScale} label="Legal" />
+        <Sector icon={HiSun} label="Tourism" />
+        <Sector icon={HiEmojiHappy} label="Leisure" />
+        <Sector icon={HiOfficeBuilding} label="Business" />
+        <Sector icon={HiCog} label="Industrial" />
+        <Sector icon={HiGlobe} label="Agricultural" />
+      </Flex>
     </Stack>
   );
 }

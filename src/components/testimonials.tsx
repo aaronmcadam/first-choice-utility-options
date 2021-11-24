@@ -1,6 +1,7 @@
 import {
   Avatar,
   Box,
+  Divider,
   Flex,
   HStack,
   SimpleGrid,
@@ -14,13 +15,15 @@ import { QuotesIcon } from "./quotes-icon";
 export function Testimonials() {
   return (
     <Box bg="purple.50">
-      <SimpleGrid columns={2} mt={10} px={6} maxW="6xl" mx="auto">
+      <SimpleGrid columns={{ base: 1, sm: 2 }} mt={10} mx="auto">
         <Flex
           direction="column"
           py={16}
           pr={10}
-          borderRightWidth="1px"
-          borderRightColor="purple.200"
+          px={6}
+          borderColor="purple.200"
+          borderRightWidth={{ base: 0, sm: "1px" }}
+          borderBottomWidth={{ base: "1px", sm: 0 }}
         >
           <Box flexShrink={0}>
             <Logo h={6} />
@@ -68,8 +71,10 @@ export function Testimonials() {
           direction="column"
           py={16}
           pl={10}
-          borderLeftWidth="1px"
-          borderLeftColor="purple.200"
+          px={6}
+          borderColor="purple.200"
+          borderLeftWidth={{ base: 0, sm: "1px" }}
+          borderTopWidth={{ base: "1px", sm: 0 }}
         >
           <Box flexShrink={0}>
             <Logo h={6} />
