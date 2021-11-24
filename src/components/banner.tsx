@@ -5,6 +5,7 @@ import { HiArrowRight } from "react-icons/hi";
 export function Banner() {
   return (
     <Stack
+      spacing={{ base: 0, sm: 2 }}
       align="flex-start"
       direction={{ base: "column", sm: "row" }}
       justify="center"
