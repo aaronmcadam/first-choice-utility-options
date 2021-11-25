@@ -17,9 +17,15 @@ import { PlayIcon } from "./play-icon";
 
 function BaseLayout() {
   return (
-    <Stack spacing={12} mt={8}>
+    <Stack spacing={12} mt={16}>
       <Stack align="flex-start" spacing={5}>
-        <Heading as="h1" fontSize="3xl" fontWeight="extrabold">
+        <Heading
+          as="h1"
+          lineHeight={1}
+          fontWeight="extrabold"
+          fontSize="4xl"
+          letterSpacing="tight"
+        >
           <Box
             as="mark"
             bgGradient="linear(to-r, #FC19AD, #7F23F7, #14AFFC)"
@@ -30,9 +36,9 @@ function BaseLayout() {
           </Box>{" "}
           off your energy bill
         </Heading>
-        <Text color="gray.500" mt="5" maxW="2xl">
-          We ensure you get the best deal by keeping on top of the ever-changing
-          tariffs from all the energy providers in Ireland.
+        <Text color="gray.500" mt="5">
+          Trust us to get you the best deal by helping you keep track of the
+          constantly changing prices charged by Irish energy suppliers.
         </Text>
         <Button
           as="a"
@@ -81,12 +87,19 @@ function BaseLayout() {
 
 function LargeLayout() {
   return (
-    <SimpleGrid columns={12} spacing={8} mt={32}>
-      <Stack gridColumn="span 6" align="flex-start" spacing={5}>
+    <SimpleGrid columns={{ sm: 1, lg: 12 }} spacing={8} mt={{ sm: 16, lg: 32 }}>
+      <Stack
+        align={{ sm: "center", lg: "flex-start" }}
+        gridColumn="span 6"
+        spacing={5}
+        textAlign={{ sm: "center", lg: "left" }}
+      >
         <Heading
           as="h1"
-          fontSize={{ base: "3xl", sm: "6xl" }}
           fontWeight="extrabold"
+          letterSpacing="tight"
+          lineHeight={1}
+          fontSize={{ sm: "5xl", xl: "6xl" }}
         >
           <Box
             as="mark"
@@ -98,17 +111,16 @@ function LargeLayout() {
           </Box>{" "}
           off your energy bill
         </Heading>
-        <Text color="gray.500" mt="5" fontSize="xl" maxW="2xl">
-          We ensure you get the best deal by keeping on top of the ever-changing
-          tariffs from all the energy providers in Ireland.
-        </Text>
-        <Button
-          as="a"
-          href="tel:00353872470718"
-          variant="primary"
-          size="lg"
-          w={{ base: "full", sm: "auto" }}
+        <Text
+          color="gray.500"
+          mt="5"
+          fontSize={{ sm: "xl", lg: "lg", xl: "xl" }}
+          maxW="xl"
         >
+          Trust us to get you the best deal by helping you keep track of the
+          constantly changing prices charged by Irish energy suppliers.
+        </Text>
+        <Button as="a" href="tel:00353872470718" variant="primary" size="lg">
           Get a quote
         </Button>
       </Stack>
