@@ -1,10 +1,11 @@
-import { chakra, HTMLChakraProps } from "@chakra-ui/react";
+import { chakra, HTMLChakraProps, VisuallyHidden } from "@chakra-ui/react";
 
 export interface ProfitwatchProps extends HTMLChakraProps<"svg"> {}
 
 export function Profitwatch(props: ProfitwatchProps) {
   return (
     <>
+      <VisuallyHidden>Profitwatch.ie</VisuallyHidden>
       <chakra.svg
         viewBox="0 0 189 48"
         fill="none"

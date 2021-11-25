@@ -1,10 +1,11 @@
-import { chakra, HTMLChakraProps } from "@chakra-ui/react";
+import { chakra, HTMLChakraProps, VisuallyHidden } from "@chakra-ui/react";
 
 export interface BreffniAirProps extends HTMLChakraProps<"svg"> {}
 
 export function BreffniAir(props: BreffniAirProps) {
   return (
     <>
+      <VisuallyHidden>Breffni Air</VisuallyHidden>
       <chakra.svg
         viewBox="0 0 132 48"
         fill="none"
