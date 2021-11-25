@@ -8,7 +8,7 @@ export function CeoMessage() {
 
   return (
     <Box overflowY="hidden" px={4}>
-      <HStack spacing={10} mx="auto" pos="relative" py={24}>
+      <HStack spacing={10} pos="relative" py={24} maxW="7xl" mx="auto">
         {isDesktop ? (
           <>
             <Pattern
@@ -35,10 +35,10 @@ export function CeoMessage() {
             opacity={0.5}
           />
           <Stack as="blockquote" spacing={8} pos="relative">
-            <Text fontWeight="medium" fontSize="xl">
+            <Text fontWeight="medium" fontSize="xl" maxW="2xl">
               Our priority is the customer, not the provider. People are often
-              amazed at the saving that they can make—we’ve helped business
-              across many sectors save thousands on their electricity bills.
+              amazed at the savings they can make—we’ve helped business across
+              many sectors save thousands on their electricity bills.
             </Text>
             <HStack spacing={3}>
               {isMobile ? <Avatar size="md" src="/danny.png" /> : null}
