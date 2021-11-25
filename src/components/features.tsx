@@ -18,7 +18,7 @@ import {
 
 export function Features() {
   return (
-    <Box py={16} mx="auto" px={{ base: 4, sm: 6 }}>
+    <Box py={16} maxW="7xl" mx="auto" px={{ base: 4, sm: 6 }}>
       <Flex direction="column" align={{ base: "flex-start", sm: "center" }}>
         <Heading
           as="h4"
@@ -38,6 +38,7 @@ export function Features() {
           color="gray.500"
           fontSize="xl"
           mt={4}
+          maxW="3xl"
         >
           We combine our industry knowledge and the leverage that comes from
           representing thousands of Irish businesses to get the best possible
