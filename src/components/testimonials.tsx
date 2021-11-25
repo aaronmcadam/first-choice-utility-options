@@ -9,24 +9,26 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
-import { Logo } from "./logo";
+import { FirstChoice } from "./logos/first-choice";
+import { BreffniAir } from "./logos/breffni-air";
 import { QuotesIcon } from "./quotes-icon";
+import { Profitwatch } from "./logos/profitwatch";
 
 export function Testimonials() {
   return (
     <Box bg="purple.50">
-      <SimpleGrid columns={{ base: 1, sm: 2 }} mt={10} mx="auto">
+      <SimpleGrid columns={{ base: 1, sm: 2 }} mt={10} maxW="7xl" mx="auto">
         <Flex
           direction="column"
-          py={16}
-          pr={10}
-          px={6}
+          px={{ base: 4, sm: 6 }}
+          py={{ base: 12, md: 16 }}
+          pr={{ md: 10, lg: 16 }}
           borderColor="purple.200"
           borderRightWidth={{ base: 0, sm: "1px" }}
           borderBottomWidth={{ base: "1px", sm: 0 }}
         >
           <Box flexShrink={0}>
-            <Logo h={6} />
+            <BreffniAir h={12} />
           </Box>
           <Box pos="relative" mt={6}>
             <QuotesIcon
@@ -42,9 +44,9 @@ export function Testimonials() {
             />
             <Box as="blockquote" pos="relative">
               <Text fontSize="lg" fontWeight="medium" color="purple.900">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-                expedita voluptas culpa sapiente alias molestiae. Numquam
-                corrupti in laborum sed rerum et corporis.
+                Breffni Air have had the pleasure of working with Danny McAdam
+                over the past number of years bringing the company big savings
+                on all our utility costs.
               </Text>
               <Box as="footer" mt={8}>
                 <HStack spacing={4}>
@@ -52,14 +54,14 @@ export function Testimonials() {
                     showBorder={true}
                     borderColor="purple.900"
                     size="md"
-                    src="/danny.png"
+                    src="/anne-marie-mcphilips.png"
                   />
                   <Stack spacing={0}>
                     <Text fontWeight="medium" color="purple.900">
-                      Daniel McAdam
+                      Anne Marie McPhilips
                     </Text>
                     <Text fontWeight="medium" color="purple.600">
-                      CEO, First Choice Utility Options
+                      Financial Controller, Breffni Air
                     </Text>
                   </Stack>
                 </HStack>
@@ -69,15 +71,15 @@ export function Testimonials() {
         </Flex>
         <Flex
           direction="column"
-          py={16}
-          pl={10}
-          px={6}
+          px={{ base: 4, sm: 6 }}
+          py={{ base: 12, md: 16 }}
+          pl={{ md: 10, lg: 16 }}
           borderColor="purple.200"
           borderLeftWidth={{ base: 0, sm: "1px" }}
           borderTopWidth={{ base: "1px", sm: 0 }}
         >
           <Box flexShrink={0}>
-            <Logo h={6} />
+            <Profitwatch h={12} />
           </Box>
           <Box pos="relative" mt={6}>
             <QuotesIcon
@@ -93,9 +95,9 @@ export function Testimonials() {
             />
             <Box as="blockquote" pos="relative">
               <Text fontSize="lg" fontWeight="medium" color="purple.900">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-                expedita voluptas culpa sapiente alias molestiae. Numquam
-                corrupti in laborum sed rerum et corporis.
+                First Choice Utility Options are a hidden gem in the utility
+                market. Their attention to detail, support and customer service
+                are outstanding. The best deal is always passed to the customer.
               </Text>
               <Box as="footer" mt={8}>
                 <HStack spacing={4}>
@@ -103,14 +105,14 @@ export function Testimonials() {
                     showBorder={true}
                     borderColor="purple.900"
                     size="md"
-                    src="/danny.png"
+                    src="/oli-gleeson.png"
                   />
                   <Stack spacing={0}>
                     <Text fontWeight="medium" color="purple.900">
-                      Daniel McAdam
+                      Oli Gleeson
                     </Text>
                     <Text fontWeight="medium" color="purple.600">
-                      CEO, First Choice Utility Options
+                      CEO, Profitwatch.ie
                     </Text>
                   </Stack>
                 </HStack>

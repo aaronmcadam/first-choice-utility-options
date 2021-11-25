@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { useLayout } from "../hooks/useLayout";
-import { Logo } from "./logo";
+import { FirstChoice } from "./logos/first-choice";
 import { PlayIcon } from "./play-icon";
 
 export function Hero() {
@@ -21,7 +21,7 @@ export function Hero() {
   return (
     <Box maxW="7xl" mx="auto" px={{ base: 4, sm: 6 }}>
       <Flex justify="space-between">
-        <Logo h={{ base: 6, sm: 8 }} />
+        <FirstChoice h={{ base: 6, sm: 8 }} />
         {isDesktop ? (
           <Button as="a" href="tel:00353872470718">
             Call us

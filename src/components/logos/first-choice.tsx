@@ -2,7 +2,7 @@ import { chakra, HTMLChakraProps, VisuallyHidden } from "@chakra-ui/react";
 
 export interface LogoProps extends HTMLChakraProps<"svg"> {}
 
-export function Logo(props: LogoProps) {
+export function FirstChoice(props: LogoProps) {
   return (
     <>
       <VisuallyHidden>First Choice Utility Options</VisuallyHidden>

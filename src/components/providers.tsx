@@ -6,7 +6,7 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import { BordGais } from "./providers/bord-gais";
+import { BordGais } from "./logos/bord-gais";
 
 function Provider(props: CenterProps) {
   return (
