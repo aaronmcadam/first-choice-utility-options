@@ -30,7 +30,7 @@ export function Features() {
         >
           We work for you
         </Heading>
-        <Heading fontWeight="extrabold" mt={2}>
+        <Heading fontWeight="extrabold" mt={2} letterSpacing="tight">
           We focus on you, not the provider
         </Heading>
         <Text
