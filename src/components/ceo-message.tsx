@@ -14,7 +14,7 @@ export function CeoMessage() {
   const belowLarge = !isLarge;
 
   return (
-    <Box overflowY="hidden" px={4}>
+    <Box overflowY="hidden">
       <HStack
         spacing={10}
         pos="relative"
