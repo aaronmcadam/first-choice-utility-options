@@ -1,15 +1,30 @@
-import { Avatar, Box, HStack, Stack, Text } from "@chakra-ui/react";
-import { useLayout } from "../hooks/useLayout";
+import {
+  Avatar,
+  Box,
+  HStack,
+  Stack,
+  Text,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import { Pattern } from "./pattern";
 import { QuotesIcon } from "./quotes-icon";
 
 export function CeoMessage() {
-  const { isMobile, isDesktop } = useLayout();
+  const isLarge = useBreakpointValue({ lg: true });
+  const belowLarge = !isLarge;
 
   return (
     <Box overflowY="hidden" px={4}>
-      <HStack spacing={10} pos="relative" py={24} maxW="7xl" mx="auto">
-        {isDesktop ? (
+      <HStack
+        spacing={10}
+        pos="relative"
+        pt={24}
+        pb={12}
+        px={4}
+        maxW="7xl"
+        mx="auto"
+      >
+        {isLarge ? (
           <>
             <Pattern
               color="gray.200"
@@ -22,7 +37,7 @@ export function CeoMessage() {
             <Avatar size="3xl" src="/danny.png" />
           </>
         ) : null}
-        <Box pos="relative" ml={{ base: 0, sm: 10 }}>
+        <Box pos="relative" ml={{ lg: 10 }}>
           <QuotesIcon
             boxSize={36}
             pos="absolute"
@@ -41,7 +56,7 @@ export function CeoMessage() {
               many sectors save thousands on their electricity bills.
             </Text>
             <HStack spacing={3}>
-              {isMobile ? <Avatar size="md" src="/danny.png" /> : null}
+              {belowLarge ? <Avatar size="md" src="/danny.png" /> : null}
               <Stack spacing={0}>
                 <Text fontWeight="medium">Daniel McAdam</Text>
                 <Text fontWeight="medium" color="purple.600">
