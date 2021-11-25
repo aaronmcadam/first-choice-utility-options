@@ -3,7 +3,7 @@ import { Box, Heading, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 export function Faqs() {
   return (
     <Box bg="pink.50">
-      <Box mx="auto" px={{ base: 4, sm: 6 }} py={16}>
+      <Box px={{ base: 4, sm: 6 }} py={16} maxW="7xl" mx="auto">
         <Heading fontSize="3xl" fontWeight="extrabold" color="pink.900">
           Frequently asked questions
         </Heading>
