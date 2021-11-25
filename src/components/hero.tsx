@@ -31,11 +31,7 @@ export function Hero() {
       {isMobile ? (
         <Stack spacing={12} mt={8}>
           <Stack align="flex-start" spacing={5}>
-            <Heading
-              as="h1"
-              fontSize={{ base: "3xl", sm: "6xl" }}
-              fontWeight="extrabold"
-            >
+            <Heading as="h1" fontSize="3xl" fontWeight="extrabold">
               <Box
                 as="mark"
                 bgGradient="linear(to-r, #FC19AD, #7F23F7, #14AFFC)"
@@ -46,12 +42,7 @@ export function Hero() {
               </Box>{" "}
               off your energy bill
             </Heading>
-            <Text
-              color="purple.900"
-              mt="5"
-              fontSize={{ base: "md", sm: "xl" }}
-              maxW="2xl"
-            >
+            <Text color="gray.500" mt="5" maxW="2xl">
               We ensure you get the best deal by keeping on top of the
               ever-changing tariffs from all the energy providers in Ireland.
             </Text>
@@ -60,9 +51,9 @@ export function Hero() {
               href="tel:00353872470718"
               variant="primary"
               size="lg"
-              w={{ base: "full", sm: "auto" }}
+              w="full"
             >
-              Call us
+              Get a quote
             </Button>
           </Stack>
           <Box pos="relative" overflow="hidden" rounded="lg" shadow="lg">
@@ -115,12 +106,7 @@ export function Hero() {
               </Box>{" "}
               off your energy bill
             </Heading>
-            <Text
-              color="purple.900"
-              mt="5"
-              fontSize={{ base: "md", sm: "xl" }}
-              maxW="2xl"
-            >
+            <Text color="gray.500" mt="5" fontSize="xl" maxW="2xl">
               We ensure you get the best deal by keeping on top of the
               ever-changing tariffs from all the energy providers in Ireland.
             </Text>
@@ -131,7 +117,7 @@ export function Hero() {
               size="lg"
               w={{ base: "full", sm: "auto" }}
             >
-              Call us
+              Get a quote
             </Button>
           </Stack>
           <Flex gridColumn="span 6" align="center">
