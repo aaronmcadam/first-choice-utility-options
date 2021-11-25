@@ -28,7 +28,7 @@ const Home: NextPage = () => {
         </Head>
         <Box
           as="main"
-          pt={10}
+          pt={{ base: 6, sm: 10 }}
           // bgImage="/blobs2.png"
           // bgRepeat="no-repeat"
           // bgPosition="right top"

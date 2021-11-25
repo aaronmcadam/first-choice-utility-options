@@ -1,17 +1,10 @@
-import {
-  Avatar,
-  Box,
-  HStack,
-  Stack,
-  Text,
-  useBreakpointValue,
-} from "@chakra-ui/react";
+import { Avatar, Box, HStack, Stack, Text } from "@chakra-ui/react";
+import { useLayout } from "../hooks/useLayout";
 import { Pattern } from "./pattern";
 import { QuotesIcon } from "./quotes-icon";
 
 export function CeoMessage() {
-  const isMobile = useBreakpointValue({ base: true, sm: false });
-  const isDesktop = !isMobile;
+  const { isMobile, isDesktop } = useLayout();
 
   return (
     <Box overflowY="hidden" px={4}>
