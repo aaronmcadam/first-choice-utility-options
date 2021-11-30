@@ -34,7 +34,7 @@ export function CeoMessage() {
               transform="auto"
               translateX={-60}
             />
-            <Avatar size="3xl" src="/danny.png" />
+            <Avatar ignoreFallback={true} size="3xl" src="/danny.png" />
           </>
         ) : null}
         <Box pos="relative" ml={{ lg: 10 }}>
