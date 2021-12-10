@@ -26,13 +26,7 @@ const Home: NextPage = () => {
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Box
-          as="main"
-          pt={{ base: 6, sm: 10 }}
-          // bgImage="/blobs2.png"
-          // bgRepeat="no-repeat"
-          // bgPosition="right top"
-        >
+        <Box as="main" pt={{ base: 6, sm: 10 }}>
           <Hero />
           <Sectors />
           <Features />
@@ -43,9 +37,6 @@ const Home: NextPage = () => {
           <Cta />
         </Box>
         <Footer />
-        {/* <Box pos="absolute" w="full" top={0}>
-          <Image src="/blobs1.png" alt="bg" />
-        </Box> */}
       </Box>
     </>
   );
