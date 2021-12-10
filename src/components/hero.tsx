@@ -6,18 +6,19 @@ import {
   Heading,
   Image,
   SimpleGrid,
+  SimpleGridProps,
   Stack,
+  StackProps,
   Text,
   VisuallyHidden,
 } from "@chakra-ui/react";
 import React from "react";
-import { useLayout } from "../hooks/useLayout";
 import { FirstChoice } from "./logos/first-choice";
 import { PlayIcon } from "./play-icon";
 
-function BaseLayout() {
+function MobileLayout(stackProps: StackProps) {
   return (
-    <Stack spacing={12} mt={16}>
+    <Stack spacing={12} mt={16} {...stackProps}>
       <Stack align="flex-start" spacing={5}>
         <Heading
           as="h1"
@@ -85,9 +86,14 @@ function BaseLayout() {
   );
 }
 
-function LargeLayout() {
+function DesktopLayout(gridProps: SimpleGridProps) {
   return (
-    <SimpleGrid columns={{ sm: 1, lg: 12 }} spacing={8} mt={{ sm: 16, lg: 32 }}>
+    <SimpleGrid
+      columns={{ sm: 1, lg: 12 }}
+      spacing={8}
+      mt={{ sm: 16, lg: 32 }}
+      {...gridProps}
+    >
       <Stack
         align={{ sm: "center", lg: "flex-start" }}
         gridColumn="span 6"
@@ -164,20 +170,20 @@ function LargeLayout() {
 }
 
 export function Hero() {
-  const { isMobile, isDesktop } = useLayout();
-
   return (
     <Box maxW="7xl" mx="auto" px={{ base: 4, sm: 6 }}>
       <Flex justify="space-between">
         <FirstChoice h={{ base: 6, sm: 8 }} />
-        {isDesktop ? (
-          <Button as="a" href="tel:00353872470718">
-            Call us
-          </Button>
-        ) : null}
+        <Button
+          as="a"
+          href="tel:00353872470718"
+          display={{ base: "none", sm: "inline" }}
+        >
+          Call us
+        </Button>
       </Flex>
-      {isMobile ? <BaseLayout /> : null}
-      {isDesktop ? <LargeLayout /> : null}
+      <MobileLayout display={{ base: "flex", sm: "none" }} />
+      <DesktopLayout display={{ base: "none", sm: "flex" }} />
     </Box>
   );
 }
