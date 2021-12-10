@@ -1,10 +1,10 @@
 import {
+  AspectRatio,
   Box,
   Button,
   chakra,
   Flex,
   Heading,
-  Image,
   SimpleGrid,
   SimpleGridProps,
   Stack,
@@ -15,6 +15,7 @@ import {
 import React from "react";
 import { FirstChoice } from "./logos/first-choice";
 import { PlayIcon } from "./play-icon";
+import { Image } from "./image";
 
 function MobileLayout(stackProps: StackProps) {
   return (
@@ -52,36 +53,40 @@ function MobileLayout(stackProps: StackProps) {
         </Button>
       </Stack>
       <Box pos="relative" overflow="hidden" rounded="lg" shadow="lg">
-        <chakra.button
-          as="a"
-          href="https://youtu.be/UmzX6VxRshw"
-          target="_blank"
-          rel="noopener noreferrer"
-          pos="relative"
-          display="block"
-        >
-          <VisuallyHidden>Watch our video to learn more</VisuallyHidden>
-          <Image
-            alt="Watch our video to learn more"
-            src="/video-thumbnail.png"
-            w="full"
-            h="full"
-          />
-          <Flex
-            aria-hidden="true"
-            align="center"
-            justify="center"
-            pos="absolute"
-            top={0}
-            right={0}
-            bottom={0}
-            left={0}
-            w="full"
-            h="full"
+        <AspectRatio ratio={1.5 / 1}>
+          <chakra.button
+            as="a"
+            href="https://youtu.be/UmzX6VxRshw"
+            target="_blank"
+            rel="noopener noreferrer"
+            pos="relative"
+            display="block"
           >
-            <PlayIcon color="purple.500" boxSize={20} />
-          </Flex>
-        </chakra.button>
+            <VisuallyHidden>Watch our video to learn more</VisuallyHidden>
+            <Image
+              alt="Watch our video to learn more"
+              src="/video-thumbnail.png"
+              w="full"
+              h="full"
+              layout="fill"
+              priority={true}
+            />
+            <Flex
+              aria-hidden="true"
+              align="center"
+              justify="center"
+              pos="absolute"
+              top={0}
+              right={0}
+              bottom={0}
+              left={0}
+              w="full"
+              h="full"
+            >
+              <PlayIcon color="purple.500" boxSize={20} />
+            </Flex>
+          </chakra.button>
+        </AspectRatio>
       </Box>
     </Stack>
   );
@@ -93,6 +98,7 @@ function DesktopLayout(gridProps: SimpleGridProps) {
       columns={{ sm: 1, lg: 12 }}
       spacing={8}
       mt={{ sm: 16, lg: 32 }}
+      w="full"
       {...gridProps}
     >
       <Stack
@@ -100,6 +106,7 @@ function DesktopLayout(gridProps: SimpleGridProps) {
         gridColumn="span 6"
         spacing={5}
         textAlign={{ sm: "center", lg: "left" }}
+        w="full"
       >
         <Heading
           as="h1"
@@ -131,40 +138,40 @@ function DesktopLayout(gridProps: SimpleGridProps) {
           Get a free quote
         </Button>
       </Stack>
-      <Flex gridColumn="span 6" align="center">
-        <Box rounded="lg" shadow="lg" mx="auto" w="full" maxW="md">
-          <chakra.button
-            as="a"
-            href="https://youtu.be/UmzX6VxRshw"
-            target="_blank"
-            rel="noopener noreferrer"
-            pos="relative"
-            display="block"
-            rounded="lg"
-            overflow="hidden"
-          >
-            <VisuallyHidden>Watch our video to learn more</VisuallyHidden>
-            <Image
-              alt="Watch our video to learn more"
-              src="/video-thumbnail.png"
-              w="full"
-              h="full"
-            />
-            <Flex
-              aria-hidden="true"
-              align="center"
-              justify="center"
-              pos="absolute"
-              top={0}
-              right={0}
-              bottom={0}
-              left={0}
-              w="full"
-              h="full"
+      <Flex gridColumn="span 6" align="center" w="full">
+        <Box rounded="lg" shadow="lg" w="full" maxW="md" overflow="hidden">
+          <AspectRatio ratio={1.5 / 1}>
+            <chakra.button
+              as="a"
+              href="https://youtu.be/UmzX6VxRshw"
+              target="_blank"
+              rel="noopener noreferrer"
+              pos="relative"
+              display="block"
             >
-              <PlayIcon color="purple.500" boxSize={20} />
-            </Flex>
-          </chakra.button>
+              <VisuallyHidden>Watch our video to learn more</VisuallyHidden>
+              <Image
+                alt="Watch our video to learn more"
+                src="/video-thumbnail.png"
+                layout="fill"
+                priority={true}
+              />
+              <Flex
+                aria-hidden="true"
+                align="center"
+                justify="center"
+                pos="absolute"
+                top={0}
+                right={0}
+                bottom={0}
+                left={0}
+                w="full"
+                h="full"
+              >
+                <PlayIcon color="purple.500" boxSize={20} />
+              </Flex>
+            </chakra.button>
+          </AspectRatio>
         </Box>
       </Flex>
     </SimpleGrid>
