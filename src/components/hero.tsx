@@ -65,6 +65,7 @@ function MobileLayout(stackProps: StackProps) {
             alt="Watch our video to learn more"
             src="/video-thumbnail.png"
             w="full"
+            h="full"
           />
           <Flex
             aria-hidden="true"
@@ -147,6 +148,7 @@ function DesktopLayout(gridProps: SimpleGridProps) {
               alt="Watch our video to learn more"
               src="/video-thumbnail.png"
               w="full"
+              h="full"
             />
             <Flex
               aria-hidden="true"
