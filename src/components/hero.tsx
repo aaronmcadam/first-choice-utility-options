@@ -48,7 +48,7 @@ function MobileLayout(stackProps: StackProps) {
           size="lg"
           w="full"
         >
-          Get a quote
+          Get a quote for free
         </Button>
       </Stack>
       <Box pos="relative" overflow="hidden" rounded="lg" shadow="lg">
@@ -127,7 +127,7 @@ function DesktopLayout(gridProps: SimpleGridProps) {
           constantly changing prices charged by Irish energy suppliers.
         </Text>
         <Button as="a" href="tel:00353872470718" variant="primary" size="lg">
-          Get a quote
+          Get a quote for free
         </Button>
       </Stack>
       <Flex gridColumn="span 6" align="center">
